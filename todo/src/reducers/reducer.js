@@ -1,7 +1,7 @@
 export const initialState = [{
   todo: '',
   completed: false,
-  id: Math.random()
+  id: Date()
 }]
 
 export const reducer = (state, action) => {
@@ -20,7 +20,7 @@ export const reducer = (state, action) => {
       case "CLEAR_COMPLETED" :
           return state.filter((item) => !item.completed)
 
-      case "return state": 
+      default:
           return state
   }
 

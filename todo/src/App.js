@@ -10,18 +10,18 @@ function App() {
     const newTodo = {
       todo: input,
       completed: false,
-      id: 4
+      id: Date()
     }
-    dispatch({type: "ADD_TODO", payload: newTodo})
-  }
+    dispatch({type: "ADD_TODO", payload: newTodo});
+  };
 
   const handleComplete = (id) => {
-    dispatch({type:"COMPLETED", payload: id})
-  }
+    dispatch({type:"COMPLETED", payload: id});
+  };
 
   const clearCompleted = () => {
-    dispatch({type: "CLEAR_COMPLETED"})
-  }
+    dispatch({type: "CLEAR_COMPLETED"});
+  };
 
   return (
     <div>
